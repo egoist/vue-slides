@@ -28,7 +28,7 @@ $ npm install --save vue-slides
 
 ## Usage
 
-Vue-Slides use Vuex to manage states, so you should bind the `slides module` to your existing vuex store before gettering started.
+Vue-Slides use Vuex to manage states, so you should bind the `slides module` to your existing vuex store before getting started.
 
 ```js
 // in your store.js
