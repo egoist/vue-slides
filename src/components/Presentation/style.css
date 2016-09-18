@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box
+}
+
+.presentation {
+  font: 28px/1.7 'Helvetica Neue', sans-serif;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  h1, h2, h3, h4, h5, p, ul, ol, table {
+    margin: 0;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+  }
+
+  code {
+    border: 1px dashed #999;
+  }
+}
+
+.slide-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slides-indicator {
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #4078c0;
+  z-index: 99999;
+  transition: width .3s linear;
+  &:after {
+    content: attr(data-tip);
+    position: absolute;
+    font-size: 12px;
+    bottom: 100%;
+    left: 100%;
+    color: #4078c0;
+    transform: translateX(-50%);
+  }
+}
