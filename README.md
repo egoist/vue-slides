@@ -2,7 +2,19 @@
 
 [![NPM version](https://img.shields.io/npm/v/vue-slides.svg?style=flat-square)](https://npmjs.com/package/vue-slides) [![NPM downloads](https://img.shields.io/npm/dm/vue-slides.svg?style=flat-square)](https://npmjs.com/package/vue-slides) [![Build Status](https://img.shields.io/circleci/project/egoist/vue-slides/master.svg?style=flat-square)](https://circleci.com/gh/egoist/vue-slides)
 
-> Fantastic slides made with Vue.js
+<details><summary>Table of Contents</summary>
+
+<!-- toc -->
+
+- [Install](#install)
+- [Usage](#usage)
+- [Command-Line Tool](#command-line-tool)
+- [Contributing](#contributing)
+- [License](#license)
+
+<!-- tocstop -->
+
+</details>
 
 ## Install
 
