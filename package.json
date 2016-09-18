@@ -13,7 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo src/**/*.js",
     "toc": "markdown-toc -i README.md",
     "dev": "vbuild example -d",
     "build:example": "vbuild example",
@@ -27,11 +27,21 @@
   ],
   "xo": {
     "semicolon": false,
-    "space": 2
+    "space": 2,
+    "envs": ["browser"],
+    "rules": {
+      "no-unused-vars": [2, { "vars": "all", "args": "none" }],
+      "curly": [
+        "error",
+        "multi-line",
+        "consistent"
+      ]
+    }
   },
   "devDependencies": {
     "postcss-nested": "^1.0.0",
     "vue": "^2.0.0-rc.6",
-    "vuex": "^2.0.0-rc.5"
+    "vuex": "^2.0.0-rc.5",
+    "xo": "^0.16.0"
   }
 }

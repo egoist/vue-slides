@@ -20,7 +20,7 @@ export default {
   render(h) {
     const total = this.$slots.default.length
     const {active, animations} = this.$store.state.slides
-    const indicatorWidth = ((active + 1) / total) * 100 + '%'
+    const indicatorWidth = `${((active + 1) / total) * 100}%`
     return (
       <div class="presentation">
         <div class="slides-indicator" data-tip={`${active + 1}/${total}`} style={{width: indicatorWidth}}></div>
