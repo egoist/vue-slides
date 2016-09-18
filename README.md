@@ -10,6 +10,7 @@
 - [Usage](#usage)
 - [Command-Line Tool](#command-line-tool)
 - [Contributing](#contributing)
+- [Development](#development)
 - [License](#license)
 
 <!-- tocstop -->
@@ -94,6 +95,17 @@ Check out [these issues](https://github.com/egoist/vue-slides/labels/contributio
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+
+## Development
+
+```bash
+# to run the example
+$ npm i -g vbuild
+$ npm run dev
+
+# test
+$ npm test
+```
 
 ## License
 
