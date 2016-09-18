@@ -6,6 +6,8 @@
 
 ## Install
 
+This project is **under heavily development**, for a quick preview you can visit: http://vs.surge.sh
+
 ```bash
 # vue-slides needs vue and vuex
 $ npm install --save vue vuex
@@ -66,6 +68,10 @@ new Vue({
   render: h => h(App)
 })
 ```
+
+## Command-Line Tool
+
+You can write JSX or HTML or even Markdown to generate beautiful slides, coming soon...
 
 ## Contributing
 
