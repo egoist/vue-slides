@@ -1,7 +1,6 @@
 import './style'
-import './animations/bounce'
-import './animations/slide-x'
-import './animations/rotate'
+import './animations/slide'
+import './animations/rotate-down'
 
 export default {
   name: 'presentation',
