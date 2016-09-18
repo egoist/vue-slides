@@ -26,7 +26,7 @@ export default {
         <div class="slides-indicator" data-tip={`${active + 1}/${total}`} style={{width: indicatorWidth}}></div>
         {this.$slots.default.map((slide, index) => {
           return (
-            <transition name={animations[index].type}>
+            <transition name={animations[index]}>
               <div data-index={index} class="slide-wrapper" v-show={index === active}>{slide}</div>
             </transition>
           )

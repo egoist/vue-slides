@@ -7,21 +7,14 @@ export default {
       type: String,
       default: 'center'
     },
-    animation: String,
-    animationDirection: {
-      type: String,
-      default: 'x'
-    }
+    animation: String
   },
   mounted() {
     if (this.animation) {
       const index = parseInt(this.$el.parentNode.getAttribute('data-index'), 10)
       this.$store.commit('slides/UPDATE_ANIMATION', {
         index,
-        animation: {
-          type: this.animation,
-          direction: this.animationDirection
-        }
+        animation: this.animation
       })
     }
   },

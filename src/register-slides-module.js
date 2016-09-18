@@ -9,7 +9,6 @@ function getRightIndex(total, active) {
 function updateAnimation(animations, index, animation) {
   return animations.map((old, i) => {
     if (index === i) {
-      if (typeof animation === 'string') return {...old, type: animation}
       return animation
     }
     return old
@@ -27,18 +26,18 @@ function updateAnimationDirection(state, direction) {
     const leftIndex = getLeftIndex(state.total, state.active)
     const leftSuffix = '--in-left'
     console.log(state.total, state.active)
-    const leftAnimation = state.animations[leftIndex].type.replace(re, fn(leftSuffix))
+    const leftAnimation = state.animations[leftIndex].replace(re, fn(leftSuffix))
     state.animations = updateAnimation(state.animations, leftIndex, leftAnimation)
     activeSuffix = '--out-right'
   } else if (direction === 'next') {
     // cares about active slide and right slide
     const rightIndex = getRightIndex(state.total, state.active)
     const rightSuffix = '--in-right'
-    const rightAnimation = state.animations[rightIndex].type.replace(re, fn(rightSuffix))
+    const rightAnimation = state.animations[rightIndex].replace(re, fn(rightSuffix))
     state.animations = updateAnimation(state.animations, rightIndex, rightAnimation)
     activeSuffix = '--out-left'
   }
-  const activeAnimation = state.animations[state.active].type.replace(re, fn(activeSuffix))
+  const activeAnimation = state.animations[state.active].replace(re, fn(activeSuffix))
   state.animations = updateAnimation(state.animations, state.active, activeAnimation)
   return state.animations
 }
@@ -63,7 +62,7 @@ export default store => {
       },
       'slides/TOTAL'(state, total) {
         state.total = total
-        state.animations = new Array(total).fill({type: 'slide', direction: 'x'})
+        state.animations = new Array(total).fill('slide')
       },
       'slides/UPDATE_ANIMATION'(state, {index, animation}) {
         state.animations = updateAnimation(state.animations, index, animation)
